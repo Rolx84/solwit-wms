@@ -28,14 +28,17 @@ const FallingText: React.FC<FallingTextProps> = ({
   const textRef = useRef<HTMLDivElement | null>(null);
   const canvasContainerRef = useRef<HTMLDivElement | null>(null);
   const [effectStarted, setEffectStarted] = useState(false);
+  const textInitialized = useRef(false);
 
   // Check reduced motion preference
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Only set innerHTML ONCE — never re-run after physics started
   useEffect(() => {
-    if (!textRef.current) return;
+    if (!textRef.current || textInitialized.current) return;
+    textInitialized.current = true;
     const words = text.split(' ');
     const newHTML = words
       .map((word) => {
