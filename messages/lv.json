@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Solwit WMS — Noliktavas vadības sistēma | Solwit Systems",
+    "description": "Moderna noliktavas vadības sistēma (WMS) no Solwit Systems. Automatizējiet noliktavas procesus, samaziniet kļūdas un palieliniet efektivitāti. 30+ gadu pieredze.",
+    "ogTitle": "Solwit WMS — Noliktavas vadības sistēma",
+    "ogDescription": "Modulāra WMS sistēma, kas pielāgojas jūsu noliktavas vajadzībām. Piesakieties bezmaksas demonstrācijai."
+  },
+  "header": {
+    "bookDemo": "Pieteikties demo",
+    "menu": "Izvēlne"
+  },
+  "hero": {
+    "fallingText": "Nepareizas preces. Pazaudēti pasūtījumi. Haoss noliktavā.",
+    "subtitle": "Ieviesiet kārtību ar Solwit WMS",
+    "ctaPrimary": "Pieteikties demonstrācijai",
+    "ctaSecondary": "Apskatīt iespējas"
+  },
+  "painSolution": {
+    "sectionTag": "Problēma → Risinājums",
+    "title": "No haosa līdz kārtībai",
+    "pains": {
+      "1": {
+        "pain": "Manuāla skaitīšana, pastāvīgas kļūdas",
+        "solution": "Reāllaika inventāra precizitāte",
+        "metric": "99.8%",
+        "metricLabel": "precizitāte"
+      },
+      "2": {
+        "pain": "Jauns darbinieks mācās nedēļām",
+        "solution": "Produktīvs no pirmās dienas ar vadītu skenēšanu",
+        "metric": "1",
+        "metricLabel": "diena apmācībai"
+      },
+      "3": {
+        "pain": "Pasūtījumu izpilde aizņem pārāk ilgu laiku",
+        "solution": "Par 25% ātrāka pasūtījumu apstrāde",
+        "metric": "25%",
+        "metricLabel": "ātrāk"
+      }
+    }
+  },
+  "features": {
+    "sectionTag": "Modulāra sistēma",
+    "title": "Iespējas, kas piemērojas jūsu noliktavai",
+    "tagline": "Maksājiet tikai par to, ko izmantojat",
+    "items": {
+      "receiving": {
+        "name": "Preču pieņemšana",
+        "short": "Svītrkodu/QR skenēšana, partiju izsekošana",
+        "details": "Automatizēta preču pieņemšana ar svītrkodu un QR kodu skenēšanu. Partiju un sērijas numuru izsekošana no pieņemšanas līdz nosūtīšanai. Kvalitātes pārbaudes integrācija."
+      },
+      "putaway": {
+        "name": "Izvietošana",
+        "short": "Viedā izvietošana, FIFO/FEFO noteikumi",
+        "details": "Sistēma automātiski iesaka optimālo novietošanas vietu, balstoties uz FIFO/FEFO principiem, produkta raksturojumu un noliktavas noslodzi."
+      },
+      "counting": {
+        "name": "Cikliskā inventarizācija",
+        "short": "Nepārtraukta krājumu pārbaude",
+        "details": "Regulāra, automatizēta inventarizācija bez operāciju pārtraukšanas. ABC analīze nosaka pārbaudes biežumu. Atšķirību automātiska identificēšana."
+      },
+      "picking": {
+        "name": "Pasūtījumu komplektēšana",
+        "short": "Optimizēti maršruti, mazāk kļūdu",
+        "details": "Viļņu, zonu un klasteru komplektēšanas stratēģijas. Sistēma aprēķina īsāko maršrutu un nodrošina pareizu preču izvēli ar skenēšanas validāciju."
+      },
+      "inventory": {
+        "name": "Inventāra kontrole",
+        "short": "Reāllaika precizitāte un izsekojamība",
+        "details": "Pilnīga krājumu pārredzamība reāllaikā. Automātiski brīdinājumi par zemu krājumu līmeni, derīguma termiņiem un krājumu neatbilstībām."
+      },
+      "shipping": {
+        "name": "Nosūtīšana",
+        "short": "Etiķešu ģenerēšana, pārvadātāju integrācija",
+        "details": "Automātiska nosūtīšanas dokumentu un etiķešu izveide. Integrācija ar galvenajiem pārvadātājiem. Sūtījumu izsekošana reāllaikā."
+      },
+      "dashboard": {
+        "name": "Vadības panelis",
+        "short": "KPI un atskaites vienā skatā",
+        "details": "Vizuāls vadības panelis ar galvenajiem veiktspējas rādītājiem. Pielāgojamas atskaites, tendences un brīdinājumi. Datu eksports un analītika."
+      },
+      "mobile": {
+        "name": "Mobilās ierīces",
+        "short": "Bezpapīra operācijas ar rokas skeneriem",
+        "details": "Pilna funkcionalitāte mobilajās ierīcēs un rokas skeneros. Intuitīvs interfeiss, kas samazina apmācības laiku un palielina produktivitāti."
+      },
+      "automation": {
+        "name": "Automatizācija",
+        "short": "Uzdevumu automatizēšana un darba plūsmas",
+        "details": "Automatizēti uzdevumu piešķīrumi, brīdinājumi un eskalācijas. Konfigurējamas darba plūsmas bez programmēšanas. Integrācija ar ERP un citām sistēmām."
+      },
+      "ai": {
+        "name": "AI un vizualizācija",
+        "short": "Pieprasījuma prognozēšana, 3D kartēšana",
+        "details": "Mākslīgā intelekta vadīta pieprasījuma prognozēšana un krājumu optimizācija. 3D noliktavas vizualizācija, siltuma kartes un noslodzes analīze."
+      }
+    }
+  },
+  "cubes": {
+    "title": "Modulāra arhitektūra",
+    "subtitle": "Katrs modulis darbojas patstāvīgi — pievienojiet jaunas iespējas, kad esat gatavi"
+  },
+  "stats": {
+    "sectionTag": "Pierādīti rezultāti",
+    "title": "Reāli ietaupījumi, izmērāmi rezultāti",
+    "items": {
+      "1": {
+        "value": "4800",
+        "prefix": "€",
+        "suffix": "",
+        "label": "gada ietaupījums uz katru pasūtījumu apstrādes darbinieku"
+      },
+      "2": {
+        "value": "15600",
+        "prefix": "€",
+        "suffix": "",
+        "label": "gada ietaupījums uz katru datu operatoru"
+      },
+      "3": {
+        "value": "25",
+        "prefix": "",
+        "suffix": "%",
+        "label": "ātrāka pasūtījumu izpilde"
+      },
+      "4": {
+        "value": "33",
+        "prefix": "",
+        "suffix": "%",
+        "label": "operatoru darba slodzes samazinājums"
+      },
+      "5": {
+        "value": "90",
+        "prefix": "",
+        "suffix": "%",
+        "label": "kļūdu skaita samazinājums"
+      }
+    }
+  },
+  "checker": {
+    "sectionTag": "Novērtējums",
+    "title": "Vai jums ir nepieciešama WMS?",
+    "subtitle": "Atzīmējiet, kas attiecas uz jūsu noliktavu",
+    "items": {
+      "1": "500+ palešu vietas",
+      "2": "1000+ SKU (preču vienības)",
+      "3": "Krājumu aprites cikls 30+ dienas",
+      "4": "Pārāk daudz laika jaunu darbinieku apmācībai",
+      "5": "Nepieciešama ātrāka izpilde ar mazāk kļūdām",
+      "6": "Noliktavas pārvaldība vairākiem klientiem (3PL)"
+    },
+    "results": {
+      "low": "Iespējams, WMS jums vēl nav nepieciešama",
+      "medium": "WMS varētu būtiski uzlabot jūsu operācijas",
+      "high": "Jums noteikti ir nepieciešama WMS — sarunāsim!",
+      "cta": "Pieteikties bezmaksas konsultācijai"
+    }
+  },
+  "faq": {
+    "sectionTag": "Biežāk uzdotie jautājumi",
+    "title": "Jautājumi un atbildes",
+    "items": {
+      "1": {
+        "question": "Kādus procesus WMS automatizē?",
+        "answer": "WMS automatizē preču pieņemšanu, izvietošanu, inventarizāciju, pasūtījumu komplektēšanu, nosūtīšanu un atskaišu veidošanu. Sistēma optimizē maršrutus, piešķir uzdevumus un nodrošina reāllaika datu pārredzamību."
+      },
+      "2": {
+        "question": "Vai WMS var integrēt ar citām sistēmām?",
+        "answer": "Jā, Solwit WMS nodrošina integrāciju ar populārākajām ERP sistēmām (SAP, 1C, Microsoft Dynamics), e-komercijas platformām un pārvadātāju sistēmām caur API un standarta protokoliem."
+      },
+      "3": {
+        "question": "Vai WMS ir piemērota mazām un vidējām noliktavām?",
+        "answer": "Noteikti. Modulārā arhitektūra ļauj sākt ar pamata funkcijām un pakāpeniski pievienot jaunus moduļus. Jūs maksājat tikai par to, ko izmantojat."
+      },
+      "4": {
+        "question": "Cik ātri var ieviest WMS?",
+        "answer": "Standarta ieviešana aizņem aptuveni 6 mēnešus, ieskaitot analīzi, konfigurēšanu, testēšanu un darbinieku apmācību. Vienkāršākiem projektiem — no 3 mēnešiem."
+      },
+      "5": {
+        "question": "Kā notiek apmācība un atbalsts?",
+        "answer": "Mēs nodrošinām pilnu darbinieku apmācību, video pamācības un dokumentāciju. Pēc ieviešanas pieejams tehniskais atbalsts pa tālruni, e-pastu un attālināti."
+      },
+      "6": {
+        "question": "Vai WMS var samazināt izmaksas?",
+        "answer": "Jā, mūsu klienti vidēji ietaupa €4,800 gadā uz katru pasūtījumu apstrādes darbinieku un €15,600 uz katru datu operatoru. Kļūdu skaits samazinās par 90%."
+      },
+      "7": {
+        "question": "Vai ir pieejama demonstrācijas versija?",
+        "answer": "Jā, mēs piedāvājam bezmaksas demonstrāciju ar jūsu noliktavas scenārijiem. Pieteikties var caur formu šajā lapā vai zvanot mums."
+      }
+    }
+  },
+  "leadForm": {
+    "sectionTag": "Sāciet šodien",
+    "title": "Gatavi ieviest kārtību savā noliktavā?",
+    "subtitle": "Pieteikties bezmaksas demo ar mūsu WMS ekspertu",
+    "fields": {
+      "name": "Vārds, uzvārds",
+      "company": "Uzņēmums",
+      "email": "E-pasts",
+      "phone": "Tālrunis (neobligāti)",
+      "message": "Ziņojums (neobligāti)"
+    },
+    "submit": "Pieteikties demo",
+    "success": "Paldies! Mēs sazināsimies ar jums tuvākajā laikā.",
+    "required": "Obligāts lauks",
+    "invalidEmail": "Lūdzu, ievadiet derīgu e-pasta adresi",
+    "trust": {
+      "experience": "30+ gadu pieredze",
+      "clients": "300+ klientu",
+      "consultation": "Bezmaksas konsultācija"
+    }
+  },
+  "footer": {
+    "company": "Solcraft, SIA",
+    "registration": "Reģ. Nr. 40003048719",
+    "address": "Vienības gatve 109, 5. stāvs, Rīga, Latvija",
+    "rights": "Visas tiesības aizsargātas",
+    "privacy": "Privātuma politika"
+  }
+}

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #f7f5fa;
+  --bg-secondary: #eee9f4;
+  --bg-surface: #f0ecf5;
+  --purple-deep: #3a1d6e;
+  --purple: #62358F;
+  --purple-bright: #9D51E9;
+  --purple-glow: #b06aff;
+  --accent: #9D51E9;
+  --text-primary: #1a1028;
+  --text-secondary: #6b5f80;
+  --text-dim: #9e93b0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-purple-brand/10 shadow-sm;
+  }
+
+  .gradient-blob {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(157, 81, 233, 0.12) 0%,
+      rgba(176, 106, 255, 0.06) 40%,
+      transparent 70%
+    );
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .heading-xl {
+    @apply font-mono text-3xl sm:text-4xl lg:text-5xl text-text-primary leading-tight font-bold;
+  }
+
+  .heading-lg {
+    @apply font-mono text-2xl sm:text-3xl lg:text-4xl text-text-primary leading-tight font-bold;
+  }
+
+  .section-tag {
+    @apply font-mono text-xs uppercase tracking-wider text-purple-bright;
+  }
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cube component styles */
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  transform-style: preserve-3d;
+}
+
+.cube::before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  bottom: -36px;
+  left: -36px;
+}
+
+.cube-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cube-face-bg, #f0ecf5);
+  border: var(--cube-face-border, 2px dashed #B19EEF);
+  box-shadow: var(--cube-face-shadow, none);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

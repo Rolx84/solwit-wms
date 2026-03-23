@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "Solwit WMS — Warehouse Management System | Solwit Systems",
+    "description": "Modern warehouse management system (WMS) by Solwit Systems. Automate warehouse processes, reduce errors, and increase efficiency. 30+ years of experience.",
+    "ogTitle": "Solwit WMS — Warehouse Management System",
+    "ogDescription": "Modular WMS that adapts to your warehouse needs. Book a free demo today."
+  },
+  "header": {
+    "bookDemo": "Book Demo",
+    "menu": "Menu"
+  },
+  "hero": {
+    "fallingText": "Wrong items. Lost orders. Warehouse chaos.",
+    "subtitle": "Bring order with Solwit WMS",
+    "ctaPrimary": "Book a Demo",
+    "ctaSecondary": "See capabilities"
+  },
+  "painSolution": {
+    "sectionTag": "Problem → Solution",
+    "title": "From chaos to order",
+    "pains": {
+      "1": {
+        "pain": "Manual counting, constant errors",
+        "solution": "Real-time inventory accuracy",
+        "metric": "99.8%",
+        "metricLabel": "accuracy"
+      },
+      "2": {
+        "pain": "New staff needs weeks of training",
+        "solution": "Productive from day one with guided scanning",
+        "metric": "1",
+        "metricLabel": "day to train"
+      },
+      "3": {
+        "pain": "Orders take too long to fulfill",
+        "solution": "25% faster order processing",
+        "metric": "25%",
+        "metricLabel": "faster"
+      }
+    }
+  },
+  "features": {
+    "sectionTag": "Modular system",
+    "title": "Capabilities that adapt to your warehouse",
+    "tagline": "Pay only for what you use",
+    "items": {
+      "receiving": {
+        "name": "Receiving",
+        "short": "Barcode/QR scanning, batch tracking",
+        "details": "Automated goods receiving with barcode and QR code scanning. Batch and serial number tracking from receiving to shipping. Quality inspection integration."
+      },
+      "putaway": {
+        "name": "Put-away",
+        "short": "Smart placement, FIFO/FEFO rules",
+        "details": "System automatically suggests optimal storage location based on FIFO/FEFO principles, product characteristics, and warehouse load."
+      },
+      "counting": {
+        "name": "Cycle counting",
+        "short": "Continuous stock verification",
+        "details": "Regular, automated inventory counting without interrupting operations. ABC analysis determines check frequency. Automatic discrepancy identification."
+      },
+      "picking": {
+        "name": "Order picking",
+        "short": "Optimized routes, fewer errors",
+        "details": "Wave, zone, and cluster picking strategies. System calculates shortest route and ensures correct item selection with scan validation."
+      },
+      "inventory": {
+        "name": "Inventory control",
+        "short": "Real-time accuracy and traceability",
+        "details": "Complete real-time inventory visibility. Automatic alerts for low stock levels, expiry dates, and inventory discrepancies."
+      },
+      "shipping": {
+        "name": "Shipping",
+        "short": "Label generation, carrier integration",
+        "details": "Automatic shipping document and label creation. Integration with major carriers. Real-time shipment tracking."
+      },
+      "dashboard": {
+        "name": "Dashboard",
+        "short": "KPIs and reports in one view",
+        "details": "Visual management dashboard with key performance indicators. Customizable reports, trends, and alerts. Data export and analytics."
+      },
+      "mobile": {
+        "name": "Mobile devices",
+        "short": "Paperless operations with handheld scanners",
+        "details": "Full functionality on mobile devices and handheld scanners. Intuitive interface that reduces training time and increases productivity."
+      },
+      "automation": {
+        "name": "Automation",
+        "short": "Task automation and workflows",
+        "details": "Automated task assignments, alerts, and escalations. Configurable workflows without programming. Integration with ERP and other systems."
+      },
+      "ai": {
+        "name": "AI & Visualization",
+        "short": "Demand forecasting, 3D mapping",
+        "details": "AI-driven demand forecasting and inventory optimization. 3D warehouse visualization, heat maps, and load analysis."
+      }
+    }
+  },
+  "cubes": {
+    "title": "Modular architecture",
+    "subtitle": "Each module works independently — add new capabilities when you're ready"
+  },
+  "stats": {
+    "sectionTag": "Proven results",
+    "title": "Real savings, measurable results",
+    "items": {
+      "1": {
+        "value": "4800",
+        "prefix": "€",
+        "suffix": "",
+        "label": "annual savings per order-processing employee"
+      },
+      "2": {
+        "value": "15600",
+        "prefix": "€",
+        "suffix": "",
+        "label": "annual savings per data operator"
+      },
+      "3": {
+        "value": "25",
+        "prefix": "",
+        "suffix": "%",
+        "label": "reduction in order fulfillment time"
+      },
+      "4": {
+        "value": "33",
+        "prefix": "",
+        "suffix": "%",
+        "label": "reduction in operator workload"
+      },
+      "5": {
+        "value": "90",
+        "prefix": "",
+        "suffix": "%",
+        "label": "reduction in error count"
+      }
+    }
+  },
+  "checker": {
+    "sectionTag": "Assessment",
+    "title": "Do you need a WMS?",
+    "subtitle": "Check what applies to your warehouse",
+    "items": {
+      "1": "500+ pallet positions",
+      "2": "1,000+ SKUs",
+      "3": "Inventory turnover cycle 30+ days",
+      "4": "Too much time training new staff",
+      "5": "Need faster fulfillment with fewer errors",
+      "6": "Managing warehouse for multiple clients (3PL)"
+    },
+    "results": {
+      "low": "Maybe you don't need WMS yet",
+      "medium": "WMS could significantly improve your operations",
+      "high": "You definitely need WMS — let's talk!",
+      "cta": "Book a free consultation"
+    }
+  },
+  "faq": {
+    "sectionTag": "Frequently Asked Questions",
+    "title": "Questions and answers",
+    "items": {
+      "1": {
+        "question": "What processes does WMS automate?",
+        "answer": "WMS automates goods receiving, put-away, inventory counting, order picking, shipping, and report generation. The system optimizes routes, assigns tasks, and provides real-time data visibility."
+      },
+      "2": {
+        "question": "Can WMS integrate with other systems?",
+        "answer": "Yes, Solwit WMS integrates with popular ERP systems (SAP, 1C, Microsoft Dynamics), e-commerce platforms, and carrier systems via API and standard protocols."
+      },
+      "3": {
+        "question": "Is WMS suitable for small and medium warehouses?",
+        "answer": "Absolutely. The modular architecture allows you to start with basic features and gradually add new modules. You only pay for what you use."
+      },
+      "4": {
+        "question": "How fast can WMS be implemented?",
+        "answer": "Standard implementation takes approximately 6 months, including analysis, configuration, testing, and staff training. For simpler projects — from 3 months."
+      },
+      "5": {
+        "question": "What about training and support?",
+        "answer": "We provide full staff training, video tutorials, and documentation. After implementation, technical support is available by phone, email, and remotely."
+      },
+      "6": {
+        "question": "Can WMS reduce costs?",
+        "answer": "Yes, our clients save an average of €4,800 annually per order-processing employee and €15,600 per data operator. Error rates drop by 90%."
+      },
+      "7": {
+        "question": "Is there a demo version?",
+        "answer": "Yes, we offer a free demo with your warehouse scenarios. You can apply through the form on this page or call us."
+      }
+    }
+  },
+  "leadForm": {
+    "sectionTag": "Get started today",
+    "title": "Ready to bring order to your warehouse?",
+    "subtitle": "Book a free demo with our WMS expert",
+    "fields": {
+      "name": "Full name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message (optional)"
+    },
+    "submit": "Book Demo",
+    "success": "Thank you! We will contact you shortly.",
+    "required": "Required field",
+    "invalidEmail": "Please enter a valid email address",
+    "trust": {
+      "experience": "30+ years experience",
+      "clients": "300+ clients",
+      "consultation": "Free consultation"
+    }
+  },
+  "footer": {
+    "company": "Solcraft, SIA",
+    "registration": "Reg. No. 40003048719",
+    "address": "Vienības gatve 109, 5th floor, Rīga, Latvia",
+    "rights": "All rights reserved",
+    "privacy": "Privacy policy"
+  }
+}
