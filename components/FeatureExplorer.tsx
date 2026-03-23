@@ -36,6 +36,7 @@ function FeatureCard({
   isExpanded,
   onHover,
   onLeave,
+  onTap,
   index,
   isPurple,
   isLastCol,
@@ -44,6 +45,7 @@ function FeatureCard({
   isExpanded: boolean;
   onHover: () => void;
   onLeave: () => void;
+  onTap: () => void;
   index: number;
   isPurple: boolean;
   isLastCol: boolean;
@@ -90,6 +92,7 @@ function FeatureCard({
       }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={onTap}
       role="button"
       tabIndex={0}
       aria-expanded={isExpanded}
@@ -155,6 +158,10 @@ export default function FeatureExplorer() {
     if (hoverTimer.current) clearTimeout(hoverTimer.current);
     hoverTimer.current = setTimeout(() => setHoveredKey(null), 200);
   };
+  const handleTap = (key: FeatureKey) => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current);
+    setHoveredKey(hoveredKey === key ? null : key);
+  };
 
   return (
     <section id="features" className="section-padding relative" aria-label={t('title')}>
@@ -173,6 +180,7 @@ export default function FeatureExplorer() {
               isExpanded={hoveredKey === key}
               onHover={() => handleHover(key)}
               onLeave={handleLeave}
+              onTap={() => handleTap(key)}
               index={index}
               isPurple={index % 2 === 0}
               isLastCol={index % 5 === 4}

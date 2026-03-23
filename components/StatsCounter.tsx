@@ -67,8 +67,8 @@ function StatCard({
     <div
       ref={ref}
       className={`
-        glass-card rounded-card p-4 sm:p-5 text-center min-w-[140px] snap-center
-        flex-shrink-0 lg:flex-shrink transition-all duration-700
+        glass-card rounded-card p-4 sm:p-5 text-center transition-all duration-700
+        ${index === 4 ? 'col-span-2 sm:col-span-1' : ''}
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
       `}
       style={{ transitionDelay: `${index * 120}ms` }}
@@ -81,7 +81,7 @@ function StatCard({
           {prefix}{formatted}{suffix}
         </span>
       </div>
-      <p className="text-text-secondary font-mono text-sm sm:text-base leading-snug">{label}</p>
+      <p className="text-text-secondary font-mono text-xs sm:text-sm leading-snug">{label}</p>
     </div>
   );
 }
@@ -103,8 +103,8 @@ export default function StatsCounter() {
           <h2 className="heading-lg">{t('title')}</h2>
         </div>
 
-        {/* Horizontal scroll on mobile, grid on desktop */}
-        <div className="flex lg:grid lg:grid-cols-5 gap-3 overflow-x-auto snap-x snap-mandatory pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+        {/* 2-col grid on mobile, 5-col on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {statKeys.map((key, index) => (
             <StatCard
               key={key}
