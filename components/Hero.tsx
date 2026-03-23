@@ -87,7 +87,7 @@ export default function Hero() {
           className="absolute inset-y-0 left-0 w-1/2 opacity-[0.15]"
           style={{
             backgroundImage: 'linear-gradient(to right, #62358F 1px, transparent 1px), linear-gradient(to bottom, #62358F 1px, transparent 1px)',
-            backgroundSize: isMobile ? '50px 50px' : '80px 80px',
+            backgroundSize: isMobile ? '80px 80px' : '160px 160px',
             maskImage: 'linear-gradient(to right, black 0%, transparent 80%)',
             WebkitMaskImage: 'linear-gradient(to right, black 0%, transparent 80%)',
           }}
@@ -97,7 +97,7 @@ export default function Hero() {
           className="absolute inset-y-0 right-0 w-1/2 opacity-[0.15]"
           style={{
             backgroundImage: 'linear-gradient(to right, #62358F 1px, transparent 1px), linear-gradient(to bottom, #62358F 1px, transparent 1px)',
-            backgroundSize: isMobile ? '50px 50px' : '80px 80px',
+            backgroundSize: isMobile ? '80px 80px' : '160px 160px',
             maskImage: 'linear-gradient(to left, black 0%, transparent 80%)',
             WebkitMaskImage: 'linear-gradient(to left, black 0%, transparent 80%)',
           }}
