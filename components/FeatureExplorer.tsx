@@ -34,13 +34,19 @@ const featureIcons: Record<FeatureKey, string> = {
 function FeatureCard({
   featureKey,
   isExpanded,
-  onToggle,
+  onHover,
+  onLeave,
   index,
+  isPurple,
+  isLastCol,
 }: {
   featureKey: FeatureKey;
   isExpanded: boolean;
-  onToggle: () => void;
+  onHover: () => void;
+  onLeave: () => void;
   index: number;
+  isPurple: boolean;
+  isLastCol: boolean;
 }) {
   const t = useTranslations('features');
   const ref = useRef<HTMLDivElement>(null);
@@ -61,33 +67,41 @@ function FeatureCard({
     return () => observer.disconnect();
   }, []);
 
+  const baseBg = isPurple
+    ? 'bg-purple-brand border-purple-brand/50 hover:bg-purple-bright'
+    : 'glass-card hover:border-purple-brand/20';
+
   return (
     <div
       ref={ref}
       className={`
-        glass-card rounded-card cursor-pointer transition-all duration-300 overflow-hidden
-        hover:shadow-lg hover:border-purple-brand/20
-        ${isExpanded ? 'col-span-1 md:col-span-2 row-span-2 shadow-xl border-purple-brand/20' : ''}
+        rounded-card cursor-pointer transition-all duration-500 overflow-hidden border
+        ${baseBg}
+        ${isExpanded && !isLastCol ? 'sm:col-span-2 shadow-xl z-10' : ''}
+        ${isExpanded && isLastCol ? 'shadow-xl z-10' : ''}
+        ${!isExpanded ? 'hover:shadow-lg' : ''}
+        ${isExpanded && isPurple ? '!bg-purple-bright' : ''}
+        ${isExpanded && !isPurple ? 'bg-white border-purple-bright/30 shadow-xl shadow-purple-brand/8' : ''}
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
       `}
-      style={{ transitionDelay: isVisible ? `${index * 80}ms` : '0ms' }}
-      onClick={onToggle}
+      style={{
+        transitionDelay: isVisible ? `${index * 80}ms` : '0ms',
+        ...(isExpanded && isLastCol ? { gridColumn: 'span 2 / -1' } : {}),
+      }}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
       role="button"
       tabIndex={0}
       aria-expanded={isExpanded}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          onToggle();
-        }
-      }}
     >
-      <div className="p-5 sm:p-6">
-        <div className="flex items-start gap-4">
+      <div className="p-4 sm:p-5">
+        <div className="flex items-start gap-3">
           {/* Icon */}
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-card-sm bg-purple-brand/10 flex items-center justify-center flex-shrink-0">
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+            isPurple ? 'bg-white/20' : 'bg-purple-brand/10'
+          }`}>
             <svg
-              className="w-5 h-5 sm:w-6 sm:h-6 text-purple-brand"
+              className={`w-5 h-5 ${isPurple ? 'text-white' : 'text-purple-brand'}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -100,36 +114,29 @@ function FeatureCard({
           </div>
 
           <div className="flex-1 min-w-0">
-            <h3 className="font-mono font-bold text-lg sm:text-xl text-text-primary mb-1">
+            <h3 className={`font-mono font-bold text-sm sm:text-base leading-tight ${isPurple ? 'text-white' : 'text-text-primary'}`}>
               {t(`items.${featureKey}.name`)}
             </h3>
-            <p className="text-text-secondary text-sm font-mono">
-              {t(`items.${featureKey}.short`)}
-            </p>
+            {!isExpanded && (
+              <p className={`text-xs font-mono mt-1 line-clamp-2 ${isPurple ? 'text-white/60' : 'text-text-dim'}`}>
+                {t(`items.${featureKey}.short`)}
+              </p>
+            )}
           </div>
-
-          {/* Expand indicator */}
-          <svg
-            className={`w-5 h-5 text-text-dim transition-transform duration-300 flex-shrink-0 ${
-              isExpanded ? 'rotate-180' : ''
-            }`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
         </div>
 
-        {/* Expanded details */}
-        {isExpanded && (
-          <div className="mt-4 pt-4 border-t border-purple-brand/10 animate-fade-in">
-            <p className="text-text-secondary text-sm leading-relaxed font-mono">
+        {/* Expanded details — smooth height animation */}
+        <div
+          className={`grid transition-all duration-500 ease-out ${
+            isExpanded ? 'grid-rows-[1fr] opacity-100 mt-3 pt-3 border-t border-white/10' : 'grid-rows-[0fr] opacity-0'
+          }`}
+        >
+          <div className="overflow-hidden">
+            <p className={`text-xs sm:text-sm leading-relaxed font-mono ${isPurple ? 'text-white/80' : 'text-text-secondary'}`}>
               {t(`items.${featureKey}.details`)}
             </p>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -137,7 +144,17 @@ function FeatureCard({
 
 export default function FeatureExplorer() {
   const t = useTranslations('features');
-  const [expandedKey, setExpandedKey] = useState<FeatureKey | null>(null);
+  const [hoveredKey, setHoveredKey] = useState<FeatureKey | null>(null);
+  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleHover = (key: FeatureKey) => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current);
+    hoverTimer.current = setTimeout(() => setHoveredKey(key), 300);
+  };
+  const handleLeave = () => {
+    if (hoverTimer.current) clearTimeout(hoverTimer.current);
+    hoverTimer.current = setTimeout(() => setHoveredKey(null), 200);
+  };
 
   return (
     <section id="features" className="section-padding relative" aria-label={t('title')}>
@@ -148,14 +165,17 @@ export default function FeatureExplorer() {
           <p className="font-mono text-sm text-purple-bright">{t('tagline')}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {featureKeys.map((key, index) => (
             <FeatureCard
               key={key}
               featureKey={key}
-              isExpanded={expandedKey === key}
-              onToggle={() => setExpandedKey(expandedKey === key ? null : key)}
+              isExpanded={hoveredKey === key}
+              onHover={() => handleHover(key)}
+              onLeave={handleLeave}
               index={index}
+              isPurple={index % 2 === 0}
+              isLastCol={index % 5 === 4}
             />
           ))}
         </div>
