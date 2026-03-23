@@ -33,7 +33,7 @@ export async function generateMetadata({
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
   const meta = messages.meta;
-  const baseUrl = 'https://wms.solwit.lv';
+  const baseUrl = 'https://solwit-wms.vercel.app';
 
   return {
     title: meta.title,
@@ -88,10 +88,10 @@ export default async function LocaleLayout({
       className={fragmentMono.variable}
     >
       <head>
-        <link rel="alternate" hrefLang="lv" href="https://wms.solwit.lv/lv" />
-        <link rel="alternate" hrefLang="ru" href="https://wms.solwit.lv/ru" />
-        <link rel="alternate" hrefLang="en" href="https://wms.solwit.lv/en" />
-        <link rel="alternate" hrefLang="x-default" href="https://wms.solwit.lv/lv" />
+        <link rel="alternate" hrefLang="lv" href="https://solwit-wms.vercel.app/lv" />
+        <link rel="alternate" hrefLang="ru" href="https://solwit-wms.vercel.app/ru" />
+        <link rel="alternate" hrefLang="en" href="https://solwit-wms.vercel.app/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://solwit-wms.vercel.app/lv" />
       </head>
       <body className="font-mono bg-bg-primary text-text-primary antialiased">
         <NextIntlClientProvider messages={messages}>
