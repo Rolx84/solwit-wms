@@ -106,7 +106,7 @@ const FallingText: React.FC<FallingTextProps> = ({
     const ceiling = Bodies.rectangle(width / 2, -25, width, 50, boundaryOptions);
 
     const wordSpans = textRef.current.querySelectorAll('span');
-    const wordBodies = [...wordSpans].map((elem) => {
+    const wordBodies = Array.from(wordSpans).map((elem) => {
       const rect = elem.getBoundingClientRect();
       const x = rect.left - containerRect.left + rect.width / 2;
       const y = rect.top - containerRect.top + rect.height / 2;
