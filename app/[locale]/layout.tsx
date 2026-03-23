@@ -85,7 +85,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={fragmentMono.variable}
+      className={`${fragmentMono.variable} overflow-x-hidden`}
     >
       <head>
         <link rel="alternate" hrefLang="lv" href="https://solwit-wms.vercel.app/lv" />
@@ -93,7 +93,7 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="en" href="https://solwit-wms.vercel.app/en" />
         <link rel="alternate" hrefLang="x-default" href="https://solwit-wms.vercel.app/lv" />
       </head>
-      <body className="font-mono bg-bg-primary text-text-primary antialiased">
+      <body className="font-mono bg-bg-primary text-text-primary antialiased overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

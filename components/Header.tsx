@@ -37,13 +37,15 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-bg-secondary transition-colors"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={t('menu')}
-            aria-expanded={mobileOpen}
-          >
+          {/* Mobile: language switcher + hamburger */}
+          <div className="flex md:hidden items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              className="p-2 rounded-lg hover:bg-bg-secondary transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={t('menu')}
+              aria-expanded={mobileOpen}
+            >
             <svg
               width="24"
               height="24"
@@ -67,7 +69,8 @@ export default function Header() {
                 </>
               )}
             </svg>
-          </button>
+            </button>
+          </div>
         </nav>
 
         {/* Mobile menu */}
